@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>這個頁面的狀態資訊無效，而且可能已經損毀。</title>
+        <meta name="viewport" content="width=device-width" />
+        <style>
+         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} 
+         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}
+         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}
+         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }
+         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }
+         pre {font-family:"Consolas","Lucida Console",Monospace;font-size:11pt;margin:0;padding:0.5em;line-height:14pt}
+         .marker {font-weight: bold; color: black;text-decoration: none;}
+         .version {color: gray;}
+         .error {margin-bottom: 10px;}
+         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:pointer; }
+         @media screen and (max-width: 639px) {
+          pre { width: 440px; overflow: auto; white-space: pre-wrap; word-wrap: break-word; }
+         }
+         @media screen and (max-width: 479px) {
+          pre { width: 280px; }
+         }
+        </style>
+    </head>
+
+    <body bgcolor="white">
+
+            <span><H1>'/' 應用程式中發生伺服器錯誤。<hr width=100% size=1 color=silver></H1>
+
+            <h2> <i>這個頁面的狀態資訊無效，而且可能已經損毀。</i> </h2></span>
+
+            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">
+
+            <b> 描述: </b>在執行目前 Web 要求的過程中發生未處理的例外狀況。請檢閱堆疊追蹤以取得錯誤的詳細資訊，以及在程式碼中產生的位置。
+
+            <br><br>
+
+            <b> 例外狀況詳細資訊: </b>System.Web.HttpException: 這個頁面的狀態資訊無效，而且可能已經損毀。<br><br>
+
+            <b>原始程式錯誤:</b> <br><br>
+
+            <table width=100% bgcolor="#ffffcc">
+               <tr>
+                  <td>
+                      <code>
+
+在執行目前 Web 要求期間，產生未處理的例外狀況。如需有關例外狀況來源與位置的資訊，可以使用下列的例外狀況堆疊追蹤取得。                      </code>
+
+                  </td>
+               </tr>
+            </table>
+
+            <br>
+
+            <b>堆疊追蹤:</b> <br><br>
+
+            <table width=100% bgcolor="#ffffcc">
+               <tr>
+                  <td>
+                      <code><pre>
+
+[FormatException: 輸入不是有效的 Base-64 字串，因為它含有非 Base-64 字元、兩個以上填補字元，或在填補字元中有不合法的字元。 ]
+   System.Convert.FromBase64_Decode(Char* startInputPtr, Int32 inputLength, Byte* startDestPtr, Int32 destLength) +14474273
+   System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength) +131
+   System.Convert.FromBase64String(String s) +50
+   System.Web.UI.ObjectStateFormatter.Deserialize(String inputString, Purpose purpose) +86
+   System.Web.UI.Util.DeserializeWithAssert(IStateFormatter2 formatter, String serializedState, Purpose purpose) +65
+   System.Web.UI.HiddenFieldPageStatePersister.Load() +179
+
+[ViewStateException: 無效的 Viewstate。
+	Client IP: 202.82.255.25
+	Port: 59954
+	Referer: https://www.hkftustsc.org/enro/view.aspx
+	Path: /enro/view.aspx
+	User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:139.0) Gecko/20100101 Firefox/139.0
+	ViewState: /wEPDwULLTEyMjcyODc5NjYPZBYCAgMPZBYGAgUPDxYCHgdWaXNpYmxlaGRkAgkPPCsAEQMADxYGHgxEYXRhU291cmNlSUQFDlNxbERhdGFTb3VyY2UyHgtfIURhdGFCb3VuZGceC18hSXRlbUNvdW50Ap0EZAEQFgICAQICFgI8KwAFAQEWBB4FV2lkdGgbAAAAAACAa0ABAAAAHgRfIVNCAoACPCsABQEBFgQfBBsAAAAAAABJQAEAAAAfBQKAAhYCZmYMFCsAABYCZg9kFiACAQ9kFhhmDw8WAh4EVGV4dAUHTEc1OTczNmRkAgEPDxYCHwYFG+mVt+iAheeXm+eXh+WkmuWFg+mBi+WLleePrWRkAgIPDxYCHwYFCeaYn+acn+S6lGRkAgMPDxYGHwYFCjA55pyIMDXml6UeCUZvcmVDb2xvcgojHwUCBGRkAgQPDxYCHwYFBuS4i+WNiGRkAgUPDxYCHwYFCzM6MDAtNDozMCAgZGQCBg8PFgIfBgUL5YWo5pyfMTLoqrJkZAIHDw8WAh8GBQwx5bCP5pmCMzDliIZkZAIIDw8WAh8GBQY3NzDlhYNkZAIJDw8WAh8GBQY2NTTlhYNkZAIKDw8WBh8GBR3mnIPlk6HloLHlkI08YnI+N+aciDEz5pelOTozMB8HCiUfBQIEZGQCCw8PFgIeB0VuYWJsZWRoZGQCAg9kFhhmDw8WAh8GBQdLSzU5NzM3ZGQCAQ8PFgIfBgUb6ZW36ICF5Lm+5a2X6b6N6ZaA6aSK55Sf5rOVZGQCAg8PFgIfBgUJ5pif5...]
+
+[HttpException (0x80004005): 這個頁面的狀態資訊無效，而且可能已經損毀。]
+   System.Web.UI.ViewStateException.ThrowError(Exception inner, String persistedState, String errorPageMessage, Boolean macValidationError) +161
+   System.Web.UI.HiddenFieldPageStatePersister.Load() +332
+   System.Web.UI.Page.LoadPageStateFromPersistenceMedium() +377
+   System.Web.UI.Page.LoadAllState() +46
+   System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint) +9318
+   System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint) +355
+   System.Web.UI.Page.ProcessRequest() +79
+   System.Web.UI.Page.ProcessRequest(HttpContext context) +74
+   System.Web.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute() +542
+   System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step) +75
+   System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously) +93
+</pre>                      </code>
+
+                  </td>
+               </tr>
+            </table>
+
+            <br>
+
+            <hr width=100% size=1 color=silver>
+
+            <b>版本資訊:</b>&nbsp;Microsoft .NET Framework 版本:4.0.30319; ASP.NET 版本:4.8.4676.0
+
+            </font>
+
+    </body>
+</html>
+<!-- 
+[FormatException]: 輸入不是有效的 Base-64 字串，因為它含有非 Base-64 字元、兩個以上填補字元，或在填補字元中有不合法的字元。 
+   於 System.Convert.FromBase64_Decode(Char* startInputPtr, Int32 inputLength, Byte* startDestPtr, Int32 destLength)
+   於 System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   於 System.Convert.FromBase64String(String s)
+   於 System.Web.UI.ObjectStateFormatter.Deserialize(String inputString, Purpose purpose)
+   於 System.Web.UI.Util.DeserializeWithAssert(IStateFormatter2 formatter, String serializedState, Purpose purpose)
+   於 System.Web.UI.HiddenFieldPageStatePersister.Load()
+[ViewStateException]: 無效的 Viewstate。
+	Client IP: 202.82.255.25
+	Port: 59954
+	Referer: https://www.hkftustsc.org/enro/view.aspx
+	Path: /enro/view.aspx
+	User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:139.0) Gecko/20100101 Firefox/139.0
+	ViewState: /wEPDwULLTEyMjcyODc5NjYPZBYCAgMPZBYGAgUPDxYCHgdWaXNpYmxlaGRkAgkPPCsAEQMADxYGHgxEYXRhU291cmNlSUQFDlNxbERhdGFTb3VyY2UyHgtfIURhdGFCb3VuZGceC18hSXRlbUNvdW50Ap0EZAEQFgICAQICFgI8KwAFAQEWBB4FV2lkdGgbAAAAAACAa0ABAAAAHgRfIVNCAoACPCsABQEBFgQfBBsAAAAAAABJQAEAAAAfBQKAAhYCZmYMFCsAABYCZg9kFiACAQ9kFhhmDw8WAh4EVGV4dAUHTEc1OTczNmRkAgEPDxYCHwYFG+mVt+iAheeXm+eXh+WkmuWFg+mBi+WLleePrWRkAgIPDxYCHwYFCeaYn+acn+S6lGRkAgMPDxYGHwYFCjA55pyIMDXml6UeCUZvcmVDb2xvcgojHwUCBGRkAgQPDxYCHwYFBuS4i+WNiGRkAgUPDxYCHwYFCzM6MDAtNDozMCAgZGQCBg8PFgIfBgUL5YWo5pyfMTLoqrJkZAIHDw8WAh8GBQwx5bCP5pmCMzDliIZkZAIIDw8WAh8GBQY3NzDlhYNkZAIJDw8WAh8GBQY2NTTlhYNkZAIKDw8WBh8GBR3mnIPlk6HloLHlkI08YnI+N+aciDEz5pelOTozMB8HCiUfBQIEZGQCCw8PFgIeB0VuYWJsZWRoZGQCAg9kFhhmDw8WAh8GBQdLSzU5NzM3ZGQCAQ8PFgIfBgUb6ZW36ICF5Lm+5a2X6b6N6ZaA6aSK55Sf5rOVZGQCAg8PFgIfBgUJ5pif5...
+[HttpException]: 這個頁面的狀態資訊無效，而且可能已經損毀。
+   於 System.Web.UI.ViewStateException.ThrowError(Exception inner, String persistedState, String errorPageMessage, Boolean macValidationError)
+   於 System.Web.UI.HiddenFieldPageStatePersister.Load()
+   於 System.Web.UI.Page.LoadPageStateFromPersistenceMedium()
+   於 System.Web.UI.Page.LoadAllState()
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   於 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   於 System.Web.UI.Page.ProcessRequest()
+   於 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   於 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   於 System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   於 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--><!-- 
+此錯誤頁面可能包含敏感性資料，因為 ASP.NET 是設定成使用 &lt;customErrors mode="Off"/&gt; 顯示詳細資訊錯誤訊息。請考慮在實際執行環境中使用 &lt;customErrors mode="On"/&gt; 或 &lt;customErrors mode="RemoteOnly"/&gt;。-->
